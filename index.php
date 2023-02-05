@@ -12,7 +12,7 @@ switch($controller)
     case 'home' :
         $homeController = new \App\Controller\Home();
 
-        $method = isset($method) ? $method : 'index';
+        $method = isset($method) && !empty($method) && method_exists($requestController, $method) ? $method : 'index';
 
         call_user_func_array(array($homeController, $method), []);
 
@@ -21,7 +21,7 @@ switch($controller)
     case 'request' :
         $requestController = new \App\Controller\Request();
 
-        $method = isset($method) ? $method : 'index';
+        $method = isset($method) && !empty($method) && method_exists($requestController, $method) ? $method : 'index';
 
         call_user_func_array(array($requestController, $method), []);
 
