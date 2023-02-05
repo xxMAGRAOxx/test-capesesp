@@ -1,0 +1,25 @@
+{
+    "description": "Processo seletivo Capesesp",
+	"name": "test/capesesp",
+	"type": "project",
+    "authors": [
+        {
+            "name": "Carlos Magno",
+            "email": "cmagnosoares@gmail.com.br"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"            
+        },
+        "files": ["src/config/config.php", "src/config/database.php", "src/config/routes.php", "src/library/query_builder.php"]
+    },
+    "config": {
+        "platform": {
+            "php": "7.4"
+        }
+    },
+    "require": {
+        "rmccue/requests": "^1.8"
+    }
+}
