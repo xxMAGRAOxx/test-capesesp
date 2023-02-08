@@ -8,7 +8,7 @@
     var name = $('.validate-input input[name="name"]');
     var email = $('.validate-input input[name="email"]');
     var phone = $('.validate-input input[name="phone"]');
-    var matricula = $('.validate-input input[name="matricula"]');
+    // var matricula = $('.validate-input input[name="matricula"]');
     var subject = $('.validate-input input[name="subject"]');
     var message = $('.validate-input textarea[name="message"]');
 
@@ -21,10 +21,10 @@
             check = false;
         }
 
-        if ($(matricula).val().trim() == '') {
-            showValidate(matricula);
-            check = false;
-        }
+        // if ($(matricula).val().trim() == '') {
+        //     showValidate(matricula);
+        //     check = false;
+        // }
 
         if ($(subject).val().trim() == '') {
             showValidate(subject);

@@ -18,12 +18,12 @@ switch($controller)
 
     break;
 
-    case 'request' :
-        $requestController = new \App\Controller\Request();
+    case 'solicitacao' :
+        $solicitacaoController = new \App\Controller\Solicitacao();
 
-        $method = isset($method) && !empty($method) && method_exists($requestController, $method) ? $method : 'index';
+        $method = isset($method) && !empty($method) && method_exists($solicitacaoController, $method) ? $method : 'index';
 
-        call_user_func_array(array($requestController, $method), []);
+        call_user_func_array(array($solicitacaoController, $method), []);
 
     break;
 }

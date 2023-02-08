@@ -2,7 +2,7 @@
 
 class CapesespApiClient
 {
-    private static $BASE_CONNECT_URL = ['development' => 'https://newdemos-rest.vistahost.com.br'];
+    private static $BASE_CONNECT_URL = ['development' => 'https://webservicesh.capesesp.com.br/ws-workflow/solicitacao-rest/solicitacao'];
     private static $BASE_HEADERS = array("Accept" => "application/json", "Authorization" => "Basic dXN1YXJpb3Rlc3RlOmNhcGVzZXNwMjI=");
     private static $BASE_PARAMS = [];
     
@@ -19,7 +19,7 @@ class CapesespApiClient
 
         $url = self::$BASE_CONNECT_URL[ENVIRONMENT] . self::$BASE_GRAVA_SOLICITACAO . http_build_query($params);
 
-        $response = Requests::post($url, self::$BASE_HEADERS, json_encode($solicitacao));
+        $response = Requests::post($url, self::$BASE_HEADERS, $solicitacao);
 
         if(!$response->success)
             throw new Exception($response->body);

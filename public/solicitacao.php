@@ -4,7 +4,7 @@
             <img src="http://localhost/capesesp/assets/images/logo.png" alt="IMG">
         </div>
 
-        <form class="contact1-form validate-form" action="request/create" method="POST">
+        <form class="contact1-form validate-form" action="solicitacao/gravar" method="POST">
 
             <div class="wrap-input1 validate-input" data-validate="Nome é requerido">
                 <input class="input1" type="text" name="name" placeholder="Nome completo">
@@ -21,10 +21,10 @@
                 <span class="shadow-input1"></span>
             </div>
 
-            <div class="wrap-input1 validate-input" data-validate="Matricula requerida">
+            <!-- <div class="wrap-input1 validate-input" data-validate="Matricula requerida">
                 <input class="input1" type="text" name="matricula" minlength="9" maxlength="9" placeholder="Matrícula Capesesp" data-validate="Nome é requerido">
                 <span class="shadow-input1"></span>
-            </div>
+            </div> -->
 
             <div class="wrap-input1 validate-input" data-validate="Assunto é requerido">
                 <input class="input1" type="text" name="subject" placeholder="Assunto">
