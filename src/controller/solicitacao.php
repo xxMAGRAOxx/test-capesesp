@@ -37,7 +37,7 @@ class Solicitacao extends \App\Controller\Base {
             header("Location: solicitacao_criada");
         } catch (Exception $e) {
             $_SESSION['error'] = $e->getMessage();
-            header("Location: index");
+            header("Location: solicitacao_erro");
         }
     }
 

@@ -5,7 +5,7 @@ require_once "vendor/autoload.php";
 @list($controller, $method, $args) = explode("/", $_GET['route']);
 
 if (!isset($controller) || !in_array($controller, $_ROUTES))
-    die("404");
+    $controller = 'Pagina_nao_encontrada';
 
 session_start();
 
@@ -25,6 +25,15 @@ switch ($controller) {
         $method = isset($method) && !empty($method) && method_exists($solicitacaoController, $method) ? $method : 'index';
 
         call_user_func_array(array($solicitacaoController, $method), []);
+
+        break;
+
+    case 'Pagina_nao_encontrada':
+        $notFoundController = new \App\Controller\Pagina_nao_encontrada();
+
+        $method = isset($method) && !empty($method) && method_exists($notFoundController, $method) ? $method : 'index';
+
+        call_user_func_array(array($notFoundController, $method), []);
 
         break;
 }
