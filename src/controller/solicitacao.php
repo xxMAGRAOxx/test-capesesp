@@ -5,6 +5,7 @@ namespace App\Controller;
 use Exception;
 
 class Solicitacao extends \App\Controller\Base {
+
     public function index() {
         $this->renderView("solicitacao", []);
     }
@@ -27,10 +28,24 @@ class Solicitacao extends \App\Controller\Base {
         $json_gravar_solicitacao = json_encode(array('solicitacao' => $solicitacao));
 
         try {
-            \CapesespApiClient::gravaSolicitacao($json_gravar_solicitacao);
-        } catch (Exception $e) {
-        }
+            $solicitacao_criada = \CapesespApiClient::gravaSolicitacao($json_gravar_solicitacao);
 
-        header("Location: index");
+            $_SESSION['codigo'] = $solicitacao_criada->codigo;
+            $_SESSION['protocolo'] = $solicitacao_criada->protocolo;
+            $_SESSION['senha'] = $solicitacao_criada->senha;
+
+            header("Location: solicitacao_criada");
+        } catch (Exception $e) {
+            $_SESSION['error'] = $e->getMessage();
+            header("Location: index");
+        }
+    }
+
+    public function solicitacao_criada() {
+        if (!empty($_SESSION) && isset($_SESSION['codigo']) && isset($_SESSION['protocolo']) && isset($_SESSION['senha'])) {
+            $this->renderView("solicitacao_criada", []);
+        } else {
+            $this->renderView("solicitacao", []);
+        }
     }
 }

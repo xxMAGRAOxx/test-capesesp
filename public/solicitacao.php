@@ -16,10 +16,10 @@
                 <span class="shadow-input1"></span>
             </div>
 
-            <div class="wrap-input1 validate-input" data-validate="Telefone requerido no formato (99) 99999-9999">
+            <!-- <div class="wrap-input1 validate-input" data-validate="Telefone requerido no formato (99) 99999-9999">
                 <input class="input1" type="text" name="phone" class="form-control" placeholder="Telefone" />
                 <span class="shadow-input1"></span>
-            </div>
+            </div> -->
 
             <!-- <div class="wrap-input1 validate-input" data-validate="Matricula requerida">
                 <input class="input1" type="text" name="matricula" minlength="9" maxlength="9" placeholder="Matrícula Capesesp" data-validate="Nome é requerido">
