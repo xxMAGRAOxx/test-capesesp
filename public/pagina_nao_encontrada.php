@@ -5,6 +5,6 @@
         <p class="lead">
             A Página que você procura não foi encontrada.
         </p>
-        <a href="solicitacao" class="btn btn-primary">Criar solicitação</a>
+        <a href="solicitacao" class="btn btn-primary" style="background-color: #429154 !important; border-color: #2d743d !important;">Criar solicitação</a>
     </div>
 </div>

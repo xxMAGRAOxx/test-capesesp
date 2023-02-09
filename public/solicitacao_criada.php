@@ -41,7 +41,7 @@
         <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
             <i class="checkmark">✓</i>
         </div>
-        <h1>Sucesso!</h1>
+        <h1>Solicitação criada com sucesso!</h1>
         <p>Recebemos sua solicitação. Por favor anote o código, protocolo e senha;
         <br /> Código: <?php echo $_SESSION['codigo']; ?> 
         <br /> Protocolo: <?php echo $_SESSION['protocolo']; ?>
