@@ -26,7 +26,7 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="assets/css/util.css">
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
-    <link rel="icon" href="http://localhost/capesesp/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     <!--===============================================================================================-->
 </head>
 
