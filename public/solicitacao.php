@@ -1,7 +1,7 @@
 ﻿<div class="contact1">
     <div class="container-contact1">
         <div class="contact1-pic js-tilt" data-tilt>
-            <img src="http://localhost/capesesp/assets/images/logo.png" alt="IMG">
+            <img src="assets/images/logo.png" alt="IMG">
         </div>
 
         <form class="contact1-form validate-form" action="solicitacao/gravar" method="POST">
